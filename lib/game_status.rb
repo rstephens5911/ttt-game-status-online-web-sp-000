@@ -33,6 +33,8 @@ def full?(board)
   board.each do |element|
     if element == " " || element == ""
       false
+    elsif element == "X" || element == "O"
+      true
     end
   end
 end
