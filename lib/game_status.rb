@@ -38,4 +38,5 @@ def full?(board)
       full == true
     end
   end
+  full
 end
