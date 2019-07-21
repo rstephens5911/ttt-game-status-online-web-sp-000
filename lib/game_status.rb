@@ -52,6 +52,6 @@ end
 def winner(board)
   if won?(board)
     array = won?(board)
-    return board(array[0])
+    return board[array[0]]
   end
 end
