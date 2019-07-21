@@ -48,3 +48,8 @@ def over?(board)
     true
   end
 end
+
+def winner(board)
+  game_winner = won?(board)
+  return game_winner
+end
