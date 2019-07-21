@@ -32,9 +32,9 @@ end
 def full?(board)
   board.each do |element|
     if element == " " || element == ""
-      return false
-    elsif element != " " || element != ""
       return true
+    elsif element != " " || element != ""
+      return false
     end
   end
 end
