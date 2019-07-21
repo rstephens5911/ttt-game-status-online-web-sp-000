@@ -30,11 +30,12 @@ def won?(board)
 end
 
 def full?(board)
+  full = false
   board.each do |element|
     if element == " " || element == ""
-      false
+      full
     elsif element == "X" || element == "O"
-      true
+      full == true
     end
   end
 end
