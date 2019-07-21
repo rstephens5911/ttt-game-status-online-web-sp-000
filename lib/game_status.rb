@@ -22,7 +22,7 @@ def won?(board)
     pos1 = board[element[0]]
     pos2 = board[element[1]]
     pos3 = board[element[2]]
-    if (pos1 == "X" && pos2 == "X" && pos3 == "X") ||  (pos1 == "O" && pos2 == "O" && pos3 == "O")
+    if (pos1 == "X" && pos2 == "X" && pos3 == "X") || (pos1 == "O" && pos2 == "O" && pos3 == "O")
       return element
     end
   end
@@ -31,8 +31,27 @@ end
 
 def full?(board)
   board.each do |element|
-    if element.to_i == " " || element.to_i == ""
-      false
+    if element == " " || element == ""
+      return false
     end
+  end
+end
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    true
+  end
+end
+
+def over?(board)
+  if won?(board) || draw?(board) || full?(board)
+    true
+  end
+end
+
+def winner(board)
+  if won?(board)
+    array = won?(board)
+    return board[array[0]]
   end
 end
