@@ -50,6 +50,7 @@ def over?(board)
 end
 
 def winner(board)
-  game_winner = won?(board)
-  return game_winner
+  if won?(board)
+    return board.index
+  end
 end
